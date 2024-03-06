@@ -1,4 +1,4 @@
-# F\*ck The Noice NFT
+# F\*ck The Noise NFT
 
 Inspired by Israel Adesanya we are going to Fuck The Noise! Recently we have seen an influx of people getting cancelled for speaking their truth or having controversy opinions.
 
