@@ -1,0 +1,373 @@
+body {
+  margin: 0;
+  background-color: var(--backgroundColor);
+}
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+#root {
+  margin-top: -21px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --accent: #e46c11;
+  --secondAccent: #a75313;
+  --thirdAccent: #f1f6ff;
+  --darkAccent: #1f3a9c;
+  --blackAccent: #2c5364;
+  --backgroundColor: #fbfdff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.maxWidthContainer {
+  max-width: 1300px;
+  width: 100%;
+  margin: auto;
+  padding: 0px 25px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 64px;
+  margin: 0px;
+  color: white;
+}
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  margin: 0px;
+}
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  margin: 0px;
+}
+h4 {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--accent);
+  margin: 0px;
+  font-weight: 500;
+}
+p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0px;
+}
+.wP {
+  color: rgb(224, 224, 224);
+}
+.coloredText {
+  color: var(--accent);
+}
+
+.container {
+  background: #ffffff;
+  box-shadow: 0px 19px 69px -13px rgba(5, 42, 75, 0.15);
+  border-radius: 30px;
+  position: relative;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.darkContainer {
+  background: linear-gradient(
+    108.33deg,
+    #0f2027 7.48%,
+    #102228 57.99%,
+    #1c3641 88.97%
+  );
+  box-shadow: 0px 19px 69px -13px rgba(5, 42, 75, 0.15);
+  border-radius: 30px;
+  position: relative;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.clickableContainer {
+  cursor: pointer;
+  transition: 0.3s;
+  top: 0;
+}
+.clickableContainer:hover {
+  top: -10px;
+  box-shadow: 0px 19px 69px -13px rgba(5, 42, 75, 0.26);
+}
+
+.flex {
+  display: flex;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.VCenter {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.column11 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 20px;
+  width: calc(100% - 20px);
+}
+.column111 {
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  gap: 20px;
+  width: calc(100% - 40px);
+}
+@media only screen and (max-width: 800px) {
+  .column11,
+  .column111 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .removeOnSmallScreen {
+    display: none !important;
+  }
+  .removeOnBigScreen {
+    display: flex !important;
+  }
+}
+.removeOnBigScreen {
+  display: none;
+}
+.disableSelect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+.undraggableImage {
+  pointer-events: none;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: var(--accent);
+  border-radius: 50px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  padding: 15px 20px;
+  box-shadow: 0px 7px 22px -3px rgba(88, 93, 94, 0.25);
+  transition: 0.3s;
+}
+.darkBtn {
+  background-color: var(--accent);
+}
+.noBtn.darkBtn {
+  color: var(--accent);
+  background-color: unset;
+}
+.borderBtn {
+  cursor: pointer;
+  border: 1px solid var(--accent);
+  border-radius: 50px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  padding: 15px 20px;
+  transition: 0.3s;
+}
+.borderBtn:hover {
+  background-color: var(--accent);
+  color: white;
+}
+.darkBtn:hover {
+  background-color: var(--secondAccent) !important;
+}
+.noBtn.darkBtn:hover {
+  color: white;
+  background-color: var(--secondAccent) !important;
+}
+.btnDisabled {
+  background-color: #cacbcf;
+  cursor: default;
+}
+.btnDisabled:hover {
+  background-color: #cacbcf !important;
+}
+.whiteBtn {
+  background-color: white;
+  color: #858895;
+}
+.noBtn {
+  background-color: unset;
+  color: var(--accent);
+  box-shadow: unset;
+}
+.btnRound {
+  border-radius: 500px;
+}
+.btn:hover {
+  background-color: var(--secondAccent);
+}
+.noBtn:hover {
+  background-color: var(--thirdAccent);
+}
+.whiteBtn:hover {
+  background-color: var(--thirdAccent);
+  color: #333333;
+}
+.dropdownBtn .dropdownBtnArrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+.dropdownBtn .dropdownBtnArrow svg {
+  height: 20px;
+  width: 20px;
+}
+.roundBtn {
+  cursor: pointer;
+  background-color: white;
+  padding: 5px 25px;
+  border-radius: 50px;
+  color: var(--blackAccent);
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-shadow: 0px 7px 22px -3px rgba(88, 93, 94, 0.25);
+  padding-right: 15px;
+  height: 47px;
+}
+.arrowContainer {
+  border-radius: 50px;
+  background-color: var(--blackAccent);
+  color: black;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  margin-left: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrowContainer svg {
+  color: white;
+  height: 50%;
+  width: 70%;
+  margin-right: -2px;
+}
+
+/*Slider*/
+.rc-slider-tooltip-inner {
+  padding: 10px 10px !important;
+  height: unset !important;
+  font-family: "Inter", sans-serif;
+  font-size: 14px !important;
+  font-weight: bold;
+  background-color: white !important;
+  color: black !important;
+  width: 110px;
+  box-shadow: 0px 7px 22px -3px rgba(88, 93, 94, 0.25) !important;
+}
+.rc-slider-tooltip-arrow {
+  border-top-color: white !important;
+}
+.formSlider {
+  margin-top: -5px;
+}
+/*Radio*/
+.radioButton {
+  width: 35px;
+  height: 35px;
+  border-radius: 500px;
+  border: 1px solid #bbbbbb;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.radioButton.radioButtonChecked {
+  background-color: var(--secondAccent) !important;
+  border: none;
+}
+.radioButton .radioCheckmark {
+  width: 13px;
+  height: 13px;
+  border-radius: 500px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.checkBox {
+  width: 35px;
+  height: 35px;
+  border-radius: 7px;
+  border: 1px solid #bbbbbb;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkBox.checkBoxChecked {
+  background-color: var(--secondAccent) !important;
+  border: none;
+}
+.checkMark {
+  color: white;
+  width: 60%;
+  height: 60%;
+}
+
+.radioLabel,
+.checkboxLabel {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin-left: 20px;
+
+  color: #bababa;
+}
+.radioLabelChecked,
+.checkboxLabelChecked {
+  color: var(--secondAccent);
+}
+.radioButtons,
+.checkBoxContainer {
+  display: flex;
+  width: 100%;
+}
+.radioButtons .flex,
+.checkBoxContainer .flex {
+  cursor: pointer;
+}
